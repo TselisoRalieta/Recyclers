@@ -7,6 +7,6 @@ export const environment = {
     storageBucket: "recyclers-6942b.appspot.com",
     messagingSenderId: "992608521547",
     appId: "1:992608521547:web:982321c2f487ec2560acce",
-    databaseURL: "https://recyclers-6942b-default-rtdb.firebaseio.com" // Add this line
+    databaseURL: "https://recyclers-6942b-default-rtdb.firebaseio.com"
   }
 };
