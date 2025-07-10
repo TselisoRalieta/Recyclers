@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar class="custom-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home-menu"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recycling Guidelines</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding custom-content">
+  <ion-accordion-group expand="inset">
+    <ion-accordion *ngFor="let item of guidelines" [value]="item.category">
+      <ion-item slot="header" class="brown-header">
+        <ion-label class="white-label">{{ item.category }}</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <p *ngFor="let tip of item.tips">{{ tip }}</p>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>

@@ -1,0 +1,92 @@
+html, body {
+  font-size: 40px; 
+}
+
+.login-content {
+  --background: #5e5a55;
+  background-color: #5e5a55;
+  color: white;
+  padding: 20px;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 8px;
+  margin-bottom: 12px;
+  color: white;
+}
+
+ion-back-button {
+  color: white;
+}
+
+.page-title {
+  flex: 1;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  margin: 0;
+}
+
+ion-button {
+  --color: white;
+  --border-radius: 15px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+
+ion-input {
+  --color: white; 
+  --highlight-color-focused: white;
+  --placeholder-color: white;
+}
+
+
+ion-input::part(native) {
+  color: #5e5a55;
+}
+
+ion-input::part(placeholder) {
+  color: #bbb;
+}
+
+
+ion-input ion-icon {
+  color: white;
+  font-size: 20px;
+}
+
+ion-item[lines="none"] {
+  --background: transparent;
+}
+
+.login-button {
+  margin-top: 24px;
+  --background: #5e5a55;
+  --color: white;
+  font-weight: 500;
+  border-radius: 12px;
+}
+
+ion-item {
+  --background: transparent;
+  --inner-padding-end: 0;
+  --highlight-color-focused: transparent;
+  --border-width: 0;
+  --box-shadow: none;
+  border: none;
+  box-shadow: none;
+}
+
+ion-checkbox,
+ion-label {
+  color: white;
+}

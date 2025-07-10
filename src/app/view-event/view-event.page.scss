@@ -1,0 +1,40 @@
+ion-toolbar {
+    --background: #3e3e3e;
+    --color: #ffffff;
+  }
+  
+  ion-content {
+    --background: #f9f9f9;
+  
+    .event-card {
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      margin-bottom: 20px;
+  
+      ion-card-header {
+        background-color: #f1f1f1;
+      }
+  
+      ion-card-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #3e3e3e;
+      }
+  
+      ion-card-subtitle {
+        color: #888;
+      }
+  
+      ion-card-content {
+        font-size: 14px;
+        color: #3e3e3e;
+      }
+    }
+  
+    .no-events-text {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 16px;
+    }
+  }
+  

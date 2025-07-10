@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>All Reports</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card *ngFor="let report of reports">
+    <ion-card-header>
+      <ion-card-title>{{ report.title }}</ion-card-title>
+      <ion-card-subtitle>Category: {{ report.category }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ report.description }}</p>
+
+      <div *ngIf="report.imageUrl">
+        <img [src]="report.imageUrl" alt="Uploaded Image" class="report-image" />
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <div *ngIf="reports.length === 0">
+    <p>No reports found.</p>
+  </div>
+</ion-content>
+
+<ion-footer class="tab-bar">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="footer-buttons">
+      <ion-button [routerLink]="['/admin-menu']">
+        <ion-icon name="home-outline"></ion-icon>
+        HOME
+      </ion-button>
+
+      <ion-button>
+        <ion-icon name="file-tray-full-outline"></ion-icon>
+        Report
+      </ion-button>
+
+      <ion-button [routerLink]="['/admin-account']">
+        <ion-icon name="settings-outline"></ion-icon>
+        Settings
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

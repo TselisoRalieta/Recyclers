@@ -1,0 +1,24 @@
+ion-card {
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+  
+  ion-card-header {
+    background-color: #3e3e3e;
+    color: white;
+  }
+  
+  ion-card-title {
+    font-weight: bold;
+  }
+  
+  ion-input, ion-textarea {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  ion-button {
+    --background: #3e3e3e;
+    --color: white;
+  }
+  

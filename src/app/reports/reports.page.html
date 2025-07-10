@@ -1,0 +1,61 @@
+<ion-header>
+  <div class="header-content">
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-title>Submit Report</ion-title>
+  </div>
+</ion-header>
+
+<ion-content class="ion-padding submit-report-content">
+  <br><br><br>
+  <ion-item>
+    <ion-label position="floating">Report Title</ion-label>
+    <ion-input [(ngModel)]="title" name="title" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Description</ion-label>
+    <ion-textarea [(ngModel)]="description" name="description" required></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Category</ion-label>
+    <ion-select [(ngModel)]="category" name="category" required>
+      <ion-select-option value="environment">Environment</ion-select-option>
+      <ion-select-option value="safety">Safety</ion-select-option>
+      <ion-select-option value="infrastructure">Infrastructure</ion-select-option>
+      <ion-select-option value="other">Other</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button
+  expand="full"
+  type="button"
+  (click)="submitReport()"
+  [disabled]="!title || !description || !category"
+  class="submit-report-button">
+  Submit Report
+  </ion-button>
+  
+</ion-content>
+
+<ion-footer class="tab-bar">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="footer-buttons">
+      <ion-button [routerLink]="['/home-menu']">
+        <ion-icon name="home-outline"></ion-icon>
+        HOME
+      </ion-button>
+
+      <ion-button>
+        <ion-icon name="file-tray-full-outline"></ion-icon>
+        Report
+      </ion-button>
+
+      <ion-button [routerLink]="['/settings']">
+        <ion-icon name="settings-outline"></ion-icon>
+        Settings
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

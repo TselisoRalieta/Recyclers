@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home-menu"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recycling Centers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="home-content">
+  <div class="welcome-header">
+    <h2>Find a Recycling Center</h2>
+    <p>Search by material or filter to find a center near you.</p>
+  </div>
+
+  <ion-searchbar
+    [(ngModel)]="searchTerm"
+    (ionInput)="filterCenters()"
+    debounce="500"
+    placeholder="Search by material type">
+  </ion-searchbar>
+
+  <ion-item>
+    <ion-label>Filter by Material</ion-label>
+    <ion-select [(ngModel)]="selectedMaterial" (ionChange)="filterCenters()">
+      <ion-select-option value="">All</ion-select-option>
+      <ion-select-option *ngFor="let mat of materials" [value]="mat">{{ mat }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-list>
+    <ion-item *ngFor="let center of filteredCenters">
+      <ion-label>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <h2 style="margin: 0;">{{ center.name }}</h2>
+          <ion-icon
+            name="location-outline"
+            style="margin-left: 8px; font-size: 20px; color: white; cursor: pointer;"
+            (click)="openCenterInMaps(center)">
+          </ion-icon>
+        </div>
+
+        <p><strong>Address:</strong> {{ center.address }}</p>
+        <p><strong>Hours:</strong> {{ center.hours }}</p>
+        <p><strong>Materials:</strong> {{ center.materials.join(', ') }}</p>
+      </ion-label>
+
+      <ion-button fill="solid" class="details-button" slot="end" (click)="onDetails(center)">
+        Request
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

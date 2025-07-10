@@ -1,0 +1,49 @@
+<ion-header translucent="true"></ion-header>
+
+<ion-content class="login-content ion-padding">
+  <div class="top-bar">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text=""></ion-back-button>
+    </ion-buttons>
+
+    <h1 class="page-title">Log In</h1>
+
+    <ion-buttons slot="end">
+      <ion-button fill="clear" [routerLink]="['/register']">Sign Up</ion-button>
+    </ion-buttons>
+  </div>
+
+  <br><br><br> <br><br>
+  <form class="login-form" (ngSubmit)="login()" #loginForm="ngForm">
+    <ion-input 
+      label="Email" 
+      labelPlacement="floating" 
+      fill="outline"
+      type="email"
+      [(ngModel)]="email"
+      name="email"
+      required>
+      <ion-icon slot="start" name="mail-outline"></ion-icon>
+    </ion-input>
+
+    <ion-item lines="none">
+      <ion-input
+        label="Password"
+        labelPlacement="floating"
+        [type]="showPassword ? 'text' : 'password'"
+        fill="outline"
+        [(ngModel)]="password"
+        name="password"
+        required>
+      </ion-input>
+      <ion-button fill="clear" slot="end" (click)="togglePassword()" type="button">
+        {{ showPassword ? 'Hide' : 'Show' }}
+      </ion-button>
+    </ion-item>
+
+    <br><br>
+    <ion-button expand="block" class="login-button" shape="round" type="submit">
+      Log In
+    </ion-button>
+  </form>
+</ion-content>

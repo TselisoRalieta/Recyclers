@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home-menu"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Request History</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="history-content">
+  <div class="history-header">
+    <h2>Your Requests</h2>
+    <p>View all your submitted recycling center requests.</p>
+  </div>
+
+  <ion-list *ngIf="requests.length > 0; else noRequests">
+    <ion-item *ngFor="let request of requests">
+      <ion-label>
+        <h3>{{ request.center }}</h3>
+        <p><strong>Date:</strong> {{ request.date }}</p>
+        <p><strong>Status:</strong> {{ request.status }}</p>
+        <p><strong>Materials:</strong> {{ request.materials.join(', ') }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  
+  <ng-template #noRequests>
+    <div class="no-requests">
+      <ion-icon name="alert-circle-outline"></ion-icon>
+      <p>No requests found yet.</p>
+    </div>
+  </ng-template>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin-menu"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Manage Requests</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding manage-requests-content">
+  <ion-list *ngIf="requests.length > 0; else noRequests">
+    <ion-card *ngFor="let request of requests" class="request-card">
+      <ion-card-header>
+        <ion-card-title>{{ request.userName }}</ion-card-title>
+        <ion-card-subtitle>{{ request.date | date: 'medium' }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Materials:</strong> {{ request.materials.join(', ') }}</p>
+        <p><strong>Center:</strong> {{ request.center }}</p>
+        <p><strong>Message:</strong> {{ request.message || '—' }}</p>
+        <p><strong>Status:</strong> {{ request.status }}</p>
+
+        <div class="action-buttons">
+          <ion-button class="white-button" (click)="acceptRequest(request)" [disabled]="request.status !== 'pending'">Accept</ion-button>
+          <ion-button class="white-button" (click)="denyRequest(request)" [disabled]="request.status !== 'pending'">Deny</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <ng-template #noRequests>
+    <ion-text color="medium">
+      <p style="text-align:center; margin-top: 40px;">No delivery requests at the moment.</p>
+    </ion-text>
+  </ng-template>
+</ion-content>

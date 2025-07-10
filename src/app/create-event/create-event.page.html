@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back-outline" class="back-icon" [routerLink]="['/admin-menu']"></ion-icon>
+    </ion-buttons>
+    <ion-title>Create Recycling Event</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="eventForm" (ngSubmit)="submitEvent()" class="event-form">
+    <ion-item>
+      <ion-label position="floating">Event Title</ion-label>
+      <ion-input formControlName="title" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Description</ion-label>
+      <ion-textarea formControlName="description" autoGrow="true"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-datetime formControlName="datetime" displayFormat="MMM DD, YYYY HH:mm" [style.width]="'100%'"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Location</ion-label>
+      <ion-input formControlName="location" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Material Type</ion-label>
+      <ion-select formControlName="material" multiple="true">
+        <ion-select-option value="Plastic">Plastic</ion-select-option>
+        <ion-select-option value="Electronics">Electronics</ion-select-option>
+        <ion-select-option value="Glass">Glass</ion-select-option>
+        <ion-select-option value="Paper">Paper</ion-select-option>
+        <ion-select-option value="Hazardous">Hazardous Waste</ion-select-option>
+        <ion-select-option value="All" (click)="selectAllMaterials()">Select All</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" [disabled]="eventForm.invalid">
+      Create Event
+    </ion-button>
+  </form>
+</ion-content>

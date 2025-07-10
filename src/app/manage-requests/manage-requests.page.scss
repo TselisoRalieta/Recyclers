@@ -1,0 +1,34 @@
+.manage-requests-content {
+    --background: #f4f4f4;
+  
+    .request-card {
+      border-radius: 10px;
+      margin-bottom: 20px;
+  
+      ion-card-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #888;
+      }
+  
+      ion-card-subtitle {
+        font-size: 13px;
+        color: #f4f4f4;
+      }
+  
+      ion-card-content {
+        font-size: 14px;
+        color: #888;
+      }
+  
+      .action-buttons {
+        margin-top: 16px;
+        display: flex;
+        gap: 12px;
+      }
+    }
+    .white-button {
+      --background: white;
+    }
+  }
+  

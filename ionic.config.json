@@ -1,0 +1,7 @@
+{
+  "name": "RecyclersApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,100 @@
+.report-detail-content {
+  --background: #f2f2f2;
+  padding-bottom: 80px; 
+}
+
+
+.header-content {
+  background-color: #3e3e3e;
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+
+ion-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+ion-card {
+  margin: 15px;
+  border-radius: 10px;
+  background-color: #3e3e3e;
+  color: white;
+}
+
+ion-card-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+ion-card-subtitle {
+  font-size: 14px;
+}
+
+
+.report-image {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+
+ion-item {
+  margin: 15px;
+  border-radius: 8px;
+  --background: #3e3e3e;
+  color: white;
+}
+
+ion-textarea {
+  --padding-start: 10px;
+  --padding-end: 10px;
+  color: white;
+}
+
+
+.send-reply-button {
+  margin: 20px 15px;
+  background-color: #3e3e3e;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+
+.tab-bar {
+  border-top: 1px solid #ccc;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.tab-bar ion-toolbar {
+  --background: #3e3e3e;
+  padding: 6px 0;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tab-bar ion-button {
+  flex-direction: column;
+  color: #fff;
+  font-size: 14px;
+  padding: 0;
+  min-width: 70px;
+}
+
+.tab-bar ion-icon {
+  font-size: 24px;
+  margin-bottom: 4px;
+}

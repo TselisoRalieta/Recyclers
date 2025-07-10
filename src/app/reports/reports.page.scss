@@ -1,0 +1,99 @@
+.submit-report-content {
+  --background: #ffffff;
+  background-color: #ffffff;
+  color: #3e3e3e;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  background-color: white;
+}
+
+ion-title {
+  color: #3e3e3e;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+ion-item {
+  --background: #3e3e3e;
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  padding: 10px;
+}
+
+ion-item ion-label,
+ion-item ion-input,
+ion-item ion-textarea,
+ion-item ion-select,
+ion-input::part(native),
+ion-textarea::part(native),
+ion-select::part(native) {
+  color: white;
+  border-radius: 8px;
+}
+
+ion-input::part(placeholder),
+ion-textarea::part(placeholder),
+ion-select::part(placeholder) {
+  color: #ccc;
+}
+
+input[type="file"] {
+  color: #fff;
+  padding: 12px;
+  background-color: #3e3e3e;
+  border-radius: 8px;
+}
+
+.submit-report-button {
+  margin-top: 20px;
+  --background: #3e3e3e;
+  --color: white;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 12px;
+  text-transform: uppercase;
+}
+
+.submit-report-button:disabled {
+  --background: #ccc;
+  --color: #666;
+}
+
+.tab-bar {
+  border-top: 1px solid #ccc;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: white;
+}
+
+.tab-bar ion-toolbar {
+  --background: #3e3e3e;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%;
+}
+
+
+.tab-bar ion-button {
+  font-size: 14px; 
+  padding: 0; 
+}
+
+.tab-bar ion-icon {
+  font-size: 24px; 
+}
+

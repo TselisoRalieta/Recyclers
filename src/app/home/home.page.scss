@@ -1,0 +1,36 @@
+ion-content.homepage-content {
+  --background: #5e5a55;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #5e5a55;
+  color: white;
+}
+
+.logo-icon {
+  font-size: 64px;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.app-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.custom-button {
+  width: 80%;
+  margin-bottom: 20px;
+  --background: #f8f6ec;
+  --color: #000;
+  border-radius: 25px;
+  font-weight: 500;
+}
